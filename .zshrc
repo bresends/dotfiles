@@ -41,14 +41,8 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 #git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
-zinit for    light-mode zdharma-continuum/fast-syntax-highlighting    light-mode zdharma-continuum/history-search-multi-word    light-mode zsh-users/zsh-autosuggestions    light-mode zsh-users/zsh-completions
-### End of Zinit's plugins
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-#Neovim
-export PATH=$PATH:/snap/bin
 
 # Rust
 source "$HOME/.cargo/env"
@@ -64,3 +58,17 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+### Plugins
+zinit light-mode for \
+  zdharma-continuum/zinit-annex-as-monitor \
+  zdharma-continuum/zinit-annex-bin-gem-node \
+  zdharma-continuum/zinit-annex-patch-dl \
+  zdharma-continuum/zinit-annex-rust \
+
+zinit light zsh-users/zsh-completions
+zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma-continuum/history-search-multi-word 
+
+### End of Zinit's installer chunk
