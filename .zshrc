@@ -25,14 +25,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pn="pnpm"
 
 ### Plugins for zdharma-continuum zinit
@@ -51,10 +44,10 @@ export PATH="$HOME/.local/share/bob/nvim-bin/:$PATH"
 source "$HOME/.cargo/env"
 
 # Turso
-export PATH="/home/bruno/.turso:$PATH"
+export PATH="$HOME/.turso:$PATH"
 
 # Fly
-export FLYCTL_INSTALL="/home/bruno/.fly"
+export FLYCTL_INSTALL="$HOME/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # NVM
@@ -75,3 +68,10 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/history-search-multi-word 
 
 ### End of Zinit's installer chunk
+
+# bun completions
+[ -s "/home/bruno/.bun/_bun" ] && source "/home/bruno/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
