@@ -14,6 +14,7 @@ local plugins = {
         "prettierd",
         "typescript-language-server",
         "tailwindcss-language-server",
+        "gopls",
       },
     },
   },
