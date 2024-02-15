@@ -78,4 +78,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # GO
 export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
