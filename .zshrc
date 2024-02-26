@@ -14,17 +14,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
+# Alias
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pn="pnpm"
 
@@ -42,18 +32,6 @@ export PATH="$HOME/.local/share/bob/nvim-bin/:$PATH"
 
 # Rust
 source "$HOME/.cargo/env"
-
-# Turso
-export PATH="$HOME/.turso:$PATH"
-
-# Fly
-export FLYCTL_INSTALL="$HOME/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ### Plugins
 zinit light-mode for \
