@@ -50,6 +50,11 @@ zinit light zdharma-continuum/history-search-multi-word
 # bun completions
 [ -s "/home/bruno/.bun/_bun" ] && source "/home/bruno/.bun/_bun"
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
@@ -58,3 +63,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
+
