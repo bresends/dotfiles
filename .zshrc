@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pn="pnpm"
 alias vim="nvim"
-alias ls="ls -lh"
+alias ls="ls --color=auto -lh"
 
 ### Plugins for zdharma-continuum zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
