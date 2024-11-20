@@ -17,6 +17,8 @@ source $ZSH/oh-my-zsh.sh
 # Alias
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pn="pnpm"
+alias vim="nvim"
+alias ls="ls -lh"
 
 ### Plugins for zdharma-continuum zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -64,6 +66,15 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
+# Laravel
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
 # Fly.io
 export FLYCTL_INSTALL="/home/bruno/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+# Set up fzf key bindings and fuzzy completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Turso
+export PATH="$PATH:/home/bruno/.turso"
