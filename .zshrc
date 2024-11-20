@@ -66,9 +66,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
-# Laravel
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-
 # Fly.io
 export FLYCTL_INSTALL="/home/bruno/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
@@ -78,3 +75,6 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # Turso
 export PATH="$PATH:/home/bruno/.turso"
+
+# Laravel
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
