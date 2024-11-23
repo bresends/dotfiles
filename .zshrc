@@ -5,6 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+sourc
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -43,7 +44,7 @@ zinit light-mode for \
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma-continuum/history-search-multi-word 
+zinit light zdharma-continuum/history-search-multi-word
 
 ### End of Zinit's installer chunk
 
