@@ -12,7 +12,7 @@ fi
 # Instalação do Oh-my-zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
    echo -e "\e[33mIniciando instalação do Oh-my-zsh...\e[0m"
-   yes | bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+   yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
    echo -e "\e[32mOh-my-zsh já está instalado\e[0m"
 fi
@@ -61,8 +61,7 @@ if ! grep -q "Plugins for zdharma-continuum zinit" ~/.zshrc; then
     light-mode zdharma-continuum/fast-syntax-highlighting \
     light-mode zdharma-continuum/history-search-multi-word \
     light-mode zsh-users/zsh-autosuggestions \
-    light-mode zsh-users/zsh-completions
-    ### End of Zinit's plugins" >>~/.zshrc
+    light-mode zsh-users/zsh-completions" >>~/.zshrc
 else
    echo -e "\e[32mPlugins já adicionados ao arquivo ~/.zshrc\e[0m"
 fi
