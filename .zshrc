@@ -1,5 +1,10 @@
 export ZSH="$HOME/.oh-my-zsh"
 
+# Alias
+alias vim="nvim"
+alias ls="ls --color=auto -lh"
+alias a="php artisan"
+
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
