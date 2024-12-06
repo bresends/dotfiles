@@ -97,6 +97,7 @@ format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
 style = "bg:color_aqua"
 format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
 
+
 [git_metrics]
 format = "([]($added_style))[]($deleted_style)"
 added_style = "fg:#1C3A5E bg:#FCF392"
