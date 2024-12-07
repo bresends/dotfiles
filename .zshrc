@@ -1,7 +1,8 @@
-# Alias
-alias vim="nvim"
-alias ls="ls --color=auto -lh"
-alias a="php artisan"
+export ZSH="$HOME/.oh-my-zsh"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -24,6 +25,11 @@ zinit ice as"command" from"gh-r" \
           atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
+# Alias
+alias vim="nvim"
+alias ls="ls --color=auto -lh"
+alias a="php artisan"
+
 # Neovim
 export PATH="$HOME/.local/share/bob/nvim-bin/:$PATH"
 
@@ -45,9 +51,9 @@ export PHP_INI_SCAN_DIR="/home/bruno/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 
-# Rust
-source "$HOME/.cargo/env"
-
 # Fly.io
 export FLYCTL_INSTALL="/home/bruno/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+# Shell integrations
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
