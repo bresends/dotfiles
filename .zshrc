@@ -15,6 +15,7 @@ zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/history-search-multi-word
+zinit ice lucid wait has 'fzf'
 zinit light Aloxaf/fzf-tab
 
 zinit ice as"command" from"gh-r" \
@@ -25,7 +26,6 @@ zinit light starship/starship
 # Add in snippets
 zinit snippet OMZL::git.zsh
 zinit snippet OMZP::git
-zinit snippet OMZP::docker
 
 
 # Use emacs keybindings even if our EDITOR is set to vi
@@ -63,6 +63,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+
 # Aliases
 alias ls="ls --color=auto -lh"
 alias lsa='ls --color=auto -lah'
@@ -93,3 +94,9 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 # Shell integrations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init zsh)"
+
+# Always attach to tmux
+if [ -z "$TMUX" ]
+then
+    tmux attach -t tmux 2>/dev/null || tmux new -s tmux
+fi
