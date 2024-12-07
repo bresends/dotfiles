@@ -33,7 +33,11 @@ bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^I'   complete-word       # tab          | complete
-bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
+
+# Edit the current command line in $EDITOR
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line
 
 # History
 HISTSIZE=5000
@@ -61,12 +65,15 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls="ls --color=auto -lh"
+alias lsa='ls --color=auto -lah'
 alias vim='nvim'
 alias a="php artisan"
 alias cd='echo "Use z and zi!"'
 
 # Neovim
 export PATH="$HOME/.local/share/bob/nvim-bin/:$PATH"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # Laravel
 export PATH="$HOME/.config/herd-lite/bin:$PATH"
