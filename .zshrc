@@ -13,6 +13,7 @@ zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/history-search-multi-word
+zinit light Aloxaf/fzf-tab
 
 zinit ice as"command" from"gh-r" \
           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
