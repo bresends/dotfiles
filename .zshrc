@@ -32,6 +32,8 @@ zinit snippet OMZP::docker
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey '^I'   complete-word       # tab          | complete
+bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 
 # History
 HISTSIZE=5000
