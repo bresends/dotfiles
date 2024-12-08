@@ -10,7 +10,7 @@ vim.opt.smartindent = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undofile = true -- Keep edits from closed sessions
+vim.opt.undofile = true -- Keep undo history from closed sessions
 
 vim.opt.termguicolors = true
 
