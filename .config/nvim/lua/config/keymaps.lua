@@ -6,7 +6,7 @@ vim.keymap.set("n", "<leader><leader>x", "<cmd>source % | echo 'Sourced current 
 vim.keymap.set("v", "<leader><leader>x", ":lua<CR>")
 
 -- Shared Clipboard Shortcuts
-vim.keymap.set({ "n", "x" }, "y", [["+y]]) -- copy to system clipboard
+vim.keymap.set({ "n", "x" }, "<leader>y", [["+y]]) -- copy to system clipboard
 vim.keymap.set({ "n", "x" }, "<leader>p", [["+P]]) -- paste from system clipboard
 vim.keymap.set({ "n", "x" }, "<leader>d", [["+d]]) -- cut from system clipboard
 
