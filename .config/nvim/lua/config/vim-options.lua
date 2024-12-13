@@ -18,6 +18,5 @@ vim.opt.undofile = true -- Keep undo history from closed sessions
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
