@@ -38,6 +38,11 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 
 
+# Neovim
+export PATH="$HOME/.local/share/bob/nvim-bin/:$PATH"
+export EDITOR="nvim"
+export VISUAL="nvim"
+
 # Laravel
 export PATH="$HOME/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
