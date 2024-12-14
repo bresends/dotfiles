@@ -2,21 +2,22 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- Lua Execution Shortcuts
-vim.keymap.set("n", "<leader><leader>x", "<cmd>source % | echo 'Sourced current file!'<CR>")
-vim.keymap.set("v", "<leader><leader>x", ":lua<CR>")
+vim.keymap.set("n", "<leader><leader>x", "<cmd>source % | echo 'Sourced current file!'<CR>", {desc = "Source the current file "})
+vim.keymap.set("v", "<leader><leader>x", ":lua<CR>", {desc = "Execute selected Lua code"})
 
 -- Shared Clipboard Shortcuts
-vim.keymap.set({ "n", "x" }, "<leader>y", [["+y]]) -- copy to system clipboard
-vim.keymap.set({ "n", "x" }, "<leader>p", [["+P]]) -- paste from system clipboard
-vim.keymap.set({ "n", "x" }, "<leader>d", [["+d]]) -- cut from system clipboard
+vim.keymap.set({ "n", "x" }, "<leader>y", [["+y]], {desc = "Copy to system clipboard"})
+vim.keymap.set({ "n", "x" }, "<leader>p", [["+P]], {desc = "Paste from the system clipboard"})
+vim.keymap.set({ "n", "x" }, "<leader>d", [["+d]], {desc = "Cut to system clipboard"})
 
 -- LSP
-vim.keymap.set('n', 'grn', vim.lsp.buf.rename)
-vim.keymap.set('n', 'gra', vim.lsp.buf.code_action)
-vim.keymap.set('n', 'grr', vim.lsp.buf.references)
-vim.keymap.set('n', 'gri', vim.lsp.buf.implementation)
-vim.keymap.set('n', 'gQ', vim.lsp.buf.document_symbol)
-vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help)
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {desc = "LSP - Rename Symbol"})
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {desc = "LSP - Code actions"})
+vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {desc = "LSP - Go to the definition"})
+vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {desc = "LSP - Show all references "})
+vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, {desc = "LSP - Go to the implementation"})
+vim.keymap.set('n', '<leader>ds', vim.lsp.buf.document_symbol, {desc = "LSP - List all symbols in the current buffer"})
+vim.keymap.set('i', '<C-k>', vim.lsp.buf.signature_help, {desc = "LSP - Show signature help for the function being typed"})
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
