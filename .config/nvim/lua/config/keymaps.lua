@@ -12,7 +12,7 @@ vim.keymap.set({ "n", "x" }, "<leader>d", [["+d]], {desc = "Cut to system clipbo
 
 -- LSP
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {desc = "LSP - Rename Symbol"})
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {desc = "LSP - Code actions"})
+vim.keymap.set('n', '<leader>.', vim.lsp.buf.code_action, {desc = "LSP - Code actions"})
 vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {desc = "LSP - Go to the definition"})
 vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {desc = "LSP - Show all references "})
 vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, {desc = "LSP - Go to the implementation"})
