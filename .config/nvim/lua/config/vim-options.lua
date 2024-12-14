@@ -10,6 +10,10 @@ vim.opt.expandtab = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
+-- Splits
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 vim.opt.smartindent = true
 
 vim.opt.swapfile = false
