@@ -9,6 +9,7 @@ vim.keymap.set("v", "<leader><leader>x", ":lua<CR>", {desc = "Execute selected L
 vim.keymap.set({ "n", "x" }, "<leader>y", [["+y]], {desc = "Copy to system clipboard"})
 vim.keymap.set({ "n", "x" }, "<leader>p", [["+P]], {desc = "Paste from the system clipboard"})
 vim.keymap.set({ "n", "x" }, "<leader>d", [["+d]], {desc = "Cut to system clipboard"})
+vim.keymap.set("n", "<Leader>yf", "<cmd>%y+<CR>", { desc = "general copy whole file" })
 
 -- LSP
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {desc = "LSP - Rename Symbol"})
