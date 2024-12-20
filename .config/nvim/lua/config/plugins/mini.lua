@@ -7,6 +7,7 @@ return {
       })
       require('mini.git').setup()
       require('mini.diff').setup()
+      require('mini.pairs').setup()
     end,
   },
 }
