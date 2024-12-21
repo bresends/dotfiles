@@ -1,3 +1,4 @@
 # Ignore all files in the herd-lite directory
 .config/herd-lite/*
 .config/composer/*
+.config/lazygit/*
