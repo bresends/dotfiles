@@ -32,6 +32,9 @@ vim.keymap.set({ "n", "x" }, "<leader>p", [["+P]], { desc = "Paste from the syst
 vim.keymap.set({ "n", "x" }, "<leader>d", [["+d]], { desc = "Cut to system clipboard" })
 vim.keymap.set("n", "<Leader>yf", "<cmd>%y+<CR>", { desc = "general copy whole file" })
 
+-- Lazy
+vim.keymap.set("n", "<Leader>lu", "<cmd>Lazy update<CR>", { desc = "Update Plugins" })
+
 -- LSP
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP - Rename Symbol" })
 vim.keymap.set("n", "<leader>.", vim.lsp.buf.code_action, { desc = "LSP - Code actions" })
