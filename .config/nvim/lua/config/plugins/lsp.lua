@@ -10,6 +10,7 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"ts_ls",
+				"eslint",
 				"tailwindcss",
 			},
 		},
@@ -19,12 +20,10 @@ return {
 		dependencies = {
 			"mason.nvim",
 		},
-
 		opts = {
 			ensure_installed = {
 				"stylua",
 				"prettierd",
-				"eslint_d",
 			},
 		},
 	},
@@ -53,6 +52,7 @@ return {
 			local servers = {
 				"lua_ls",
 				"ts_ls",
+				"eslint",
 				"tailwindcss",
 			}
 
