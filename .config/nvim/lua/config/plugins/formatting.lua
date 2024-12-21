@@ -1,61 +1,64 @@
 return {
-  {
-    'mfussenegger/nvim-lint',
-    event = {
-      'BufReadPre',
-      'BufNewFile',
-    },
-    config = function()
-      local lint = require('lint')
-      lint.linters_by_ft = {
-        javascript = { 'eslint_d' },
-        typescript = { 'eslint_d' },
-        javascriptreact = { 'eslint_d' },
-        typescriptreact = { 'eslint_d' }
-      }
+	{
+		"mfussenegger/nvim-lint",
+		event = {
+			"BufReadPre",
+			"BufNewFile",
+		},
+		config = function()
+			local lint = require("lint")
 
-      local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
+			lint.linters_by_ft = {
+				javascript = { "eslint_d" },
+				typescript = { "eslint_d" },
+				typescriptreact = { "eslint_d" },
+			}
 
-      vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
-        group = lint_augroup,
-        callback = function()
-          lint.try_lint()
-        end
-      })
-    end,
-  },
-  {
-    'stevearc/conform.nvim',
-    event = {
-      'BufReadPre',
-      'BufNewFile',
-    },
-    config = function()
-      local conform = require('conform')
+			local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
-      conform.setup({
-        formatters_by_bt = {
-          lua = { 'stylua' },
+			vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+				group = lint_augroup,
+				callback = function()
+					if vim.opt_local.modifiable:get() then
+						lint.try_lint()
+					end
+				end,
+			})
 
-          javascript = { 'prettierd' },
-          typescript = { 'prettierd' },
-          javascriptreact = { 'prettierd' },
-          typescriptreact = { 'prettierd' }
-        },
-        format_on_save = {
-          timeout_ms = 500,
-          lsp_format = "fallback",
-        }
-      })
+			vim.keymap.set("n", "<leader>tl", function()
+				lint.try_lint()
+			end, { desc = "Try linting for current file" })
+		end,
+	},
+	{
+		"stevearc/conform.nvim",
+		event = { "BufWritePre" },
+		cmd = { "ConformInfo" },
+		keys = {
+			{
+				"<leader>f",
+				function()
+					require("conform").format({ async = true })
+				end,
+				mode = "",
+				desc = "Format buffer",
+			},
+		},
 
+		opts = {
+			formatters_by_ft = {
+				lua = { "stylua" },
+				javascript = { "prettierd" },
+				typescript = { "prettierd" },
+				typescriptreact = { "prettierd" },
+				html = { "prettierd" },
+			},
 
-      vim.keymap.set({ 'n', 'v' }, '<Leader>fs', function()
-        conform.format({
-          lsp_fallback = true,
-          async = false,
-          timeout_ms = 500,
-        })
-      end, { desc = 'Format and Save' })
-    end,
-  }
+			default_format_opts = {
+				lsp_format = "fallback",
+			},
+
+			format_on_save = { timeout_ms = 500 },
+		},
+	},
 }
