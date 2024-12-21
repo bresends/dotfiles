@@ -10,6 +10,7 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"ts_ls",
+				"tailwindcss",
 			},
 		},
 	},
@@ -46,15 +47,20 @@ return {
 		dependencies = { "folke/lazydev.nvim" },
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 			local lspconfig = require("lspconfig")
 
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
+			local servers = {
+				"lua_ls",
+				"ts_ls",
+				"tailwindcss",
+			}
 
-			lspconfig.ts_ls.setup({
-				capabilities = capabilities,
-			})
+			for _, lsp in ipairs(servers) do
+				lspconfig[lsp].setup({
+					capabilities = capabilities,
+				})
+			end
 		end,
 	},
 }
