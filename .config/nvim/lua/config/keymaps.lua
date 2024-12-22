@@ -19,6 +19,8 @@ keymap("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 keymap("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 keymap("n", "<C-u>", "<C-u>zz", { desc = "Center cursor after moving up half-page" })
 keymap("n", "<C-d>", "<C-d>zz", { desc = "Center cursor after moving down half-page" })
+keymap("i", "<M-h>", "<Left>", { desc = "move left" })
+keymap("i", "<M-l>", "<Right>", { desc = "move right" })
 
 -- Lua Execution Shortcuts
 keymap(
