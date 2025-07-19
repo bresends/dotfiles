@@ -21,9 +21,9 @@ $haskell\
 $python\
 [](fg:green bg:sapphire)\
 $docker_context\
-[](fg:sapphire bg:lavender)\
+[](fg:sapphire bg:surface2)\
 $time\
-[ ](fg:lavender)\
+[ ](fg:surface2)\
 $character"""
 
 palette = 'catppuccin_mocha'
@@ -151,8 +151,8 @@ ignore_base = false
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:lavender"
-format = '[[  $time ](fg:crust bg:lavender)]($style)'
+style = "bg:surface2"
+format = '[[  $time ](fg:text bg:surface2)]($style)'
 
 [line_break]
 disabled = true
