@@ -57,4 +57,9 @@ eval "$(zoxide init zsh)"
 # bun completions
 [ -s "/home/bruno/.bun/_bun" ] && source "/home/bruno/.bun/_bun"
 
+# Auto-start tmux
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
+
 eval "$(starship init zsh)"
