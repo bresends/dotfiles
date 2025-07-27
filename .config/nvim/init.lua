@@ -3,10 +3,9 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Imports
-require("keymaps")
+require("config.keymaps")
+require("config.lazy")
 
--- Theme
-vim.cmd.colorscheme("unokai")
 
 -- Basic settings
 vim.opt.number = true                              -- Line numbers
@@ -73,8 +72,6 @@ vim.opt.hidden = true                              -- Allow hidden buffers
 vim.opt.modifiable = true                          -- Allow buffer modifications
 vim.opt.backspace = 'indent,eol,start'             -- Better backspace behavior
 vim.opt.autochdir = false                          -- Don't auto change directory
-vim.opt.iskeyword:append('-')                      -- Treat dash as part of word
-vim.opt.path:append('**')                          -- include subdirectories in search
 vim.opt.selection = 'exclusive'                    -- Selection behavior
 vim.opt.mouse = 'a'                                -- Enable mouse support
 
