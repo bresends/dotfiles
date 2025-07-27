@@ -64,7 +64,6 @@ vim.opt.hidden = true                              -- Allow hidden buffers
 vim.opt.modifiable = true                          -- Allow buffer modifications
 vim.opt.backspace = 'indent,eol,start'             -- Better backspace behavior
 vim.opt.autochdir = false                          -- Don't auto change directory
-vim.opt.selection = 'exclusive'                    -- Selection behavior
 vim.opt.mouse = 'a'                                -- Enable mouse support
 
 -- Split behavior
