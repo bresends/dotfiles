@@ -16,7 +16,8 @@ source $ZSH/oh-my-zsh.sh
 alias ls="ls --color=auto -lh"
 alias lsa='ls --color=auto -lah'
 alias vim='nvim'
-alias a="php artisan"
+alias cd="echo 'Use Z to go to'"
+alias obs='cd /mnt/c/Users/bruno/obsidian'
 
 # Bindings
 bindkey '^p' history-search-backward
@@ -31,18 +32,6 @@ zstyle ':completion:*' menu no
 # Laravel
 export PATH="$HOME/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Rust
-source "$HOME/.cargo/env"
 
 # Fly.io
 export FLYCTL_INSTALL="$HOME/.fly"
@@ -63,3 +52,5 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 fi
 
 eval "$(starship init zsh)"
+
+eval "$(/home/bruno/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
