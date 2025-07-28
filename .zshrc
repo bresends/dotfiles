@@ -18,6 +18,7 @@ alias lsa='ls --color=auto -lah'
 alias vim='nvim'
 alias cd="echo 'Use Z to go to'"
 alias obs='cd /mnt/c/Users/bruno/obsidian'
+alias lg='lazygit'
 
 # Bindings
 bindkey '^p' history-search-backward
