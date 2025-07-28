@@ -2,8 +2,9 @@
 -- BASIC KEYMAPS
 -- ============================================================================
 
--- CONFIG & RELOAD
-vim.keymap.set('n', '<leader>rr', ':source $MYVIMRC<CR>', { desc = 'Reload config' })
+-- FILE EXECUTION & RELOAD
+vim.keymap.set('n', '<leader>rr', '<cmd>source % | echo "Sourced current file!"<CR>', { desc = 'Source the current file' })
+vim.keymap.set('v', '<leader>rx', ':lua<CR>', { desc = 'Execute selected Lua code' })
 
 -- SEARCH & NAVIGATION
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Next search result (centered)' })
@@ -14,6 +15,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Half page up (centered)' })
 -- EDITING & TEXT MANIPULATION
 vim.keymap.set({ 'n', 'v' }, '<leader>d', '"_d', { desc = 'Delete without yanking' })
 vim.keymap.set('n', 'J', 'mzJ`z', { desc = 'Join lines and keep cursor position' })
+vim.keymap.set('n', '<leader>s', '<cmd>w<CR>', { desc = 'Save file' })
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent left and reselect' })
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent right and reselect' })
 
