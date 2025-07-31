@@ -26,4 +26,5 @@ require("lazy").setup({
   install = { colorscheme = { "monokai-pro" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
+  vim.keymap.set("n", "<leader>lu", "<cmd>Lazy update<CR>", { desc = "Update Plugins" })
 })
