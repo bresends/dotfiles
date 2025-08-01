@@ -65,6 +65,7 @@ vim.opt.modifiable = true -- Allow buffer modifications
 vim.opt.backspace = "indent,eol,start" -- Better backspace behavior
 vim.opt.autochdir = false -- Don't auto change directory
 vim.opt.mouse = "a" -- Enable mouse support
+vim.opt.virtualedit = "block" -- Allow cursor positioning beyond text in visual block mode
 
 -- Split behavior
 vim.opt.splitbelow = true -- Horizontal splits go below
