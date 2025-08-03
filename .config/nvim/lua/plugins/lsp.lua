@@ -187,6 +187,10 @@ return {
 			local servers = {
 				bashls = {},
 				marksman = {},
+				tailwindcss = {},
+				html = {},
+				cssls = {},
+				emmet_ls = {},
 				-- clangd = {},
 				-- gopls = {},
 				-- pyright = {},

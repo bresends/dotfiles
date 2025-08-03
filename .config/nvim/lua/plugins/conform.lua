@@ -38,6 +38,8 @@ return {
 			javascriptreact = { "biome", stop_after_first = true },
 			typescript = { "biome", stop_after_first = true },
 			typescriptreact = { "biome", stop_after_first = true },
+			html = { "biome", stop_after_first = true },
+			css = { "biome", stop_after_first = true },
 		},
 	},
 }
