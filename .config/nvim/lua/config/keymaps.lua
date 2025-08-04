@@ -20,6 +20,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
 -- EDITING & TEXT MANIPULATION
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
+vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Write file" })
 vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
