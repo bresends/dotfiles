@@ -34,12 +34,6 @@ return {
 			-- python = { "isort", "black" },
 			--
 			-- You can use 'stop_after_first' to run the first available formatter from the list
-			javascript = { "biome", stop_after_first = true },
-			javascriptreact = { "biome", stop_after_first = true },
-			typescript = { "biome", stop_after_first = true },
-			typescriptreact = { "biome", stop_after_first = true },
-			html = { "biome", stop_after_first = true },
-			css = { "biome", stop_after_first = true },
 		},
 	},
 }
