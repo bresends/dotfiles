@@ -192,7 +192,7 @@ return {
 				html = {},
 				cssls = {},
 				emmet_ls = {},
-				pyright = {},
+				pyrefly = {},
 				-- clangd = {},
 				-- gopls = {},
 				-- rust_analyzer = {},
@@ -234,6 +234,7 @@ return {
 				"markdownlint", -- Markdown linting
 				"ruff", -- Python linting and formatting
 			})
+
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 			require("mason-lspconfig").setup({

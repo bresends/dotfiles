@@ -30,8 +30,11 @@ return {
 		end,
 		formatters_by_ft = {
 			lua = { "stylua" },
-			-- Conform can also run multiple formatters sequentially
-			python = { "ruff_format" },
+			python = { "ruff_format", "ruff_organize_imports" },
+			javascript = { "biome", "biome-organize-imports" },
+			javascriptreact = { "biome", "biome-organize-imports" },
+			typescript = { "biome", "biome-organize-imports" },
+			typescriptreact = { "biome", "biome-organize-imports" },
 		},
 	},
 }
