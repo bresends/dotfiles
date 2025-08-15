@@ -36,6 +36,7 @@ return {
 			javascriptreact = { "biome", "biome-organize-imports" },
 			typescript = { "biome", "biome-organize-imports" },
 			typescriptreact = { "biome", "biome-organize-imports" },
+			markdown = { "prettierd" },
 		},
 	},
 }
