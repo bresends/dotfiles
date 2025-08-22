@@ -64,25 +64,3 @@ vim.keymap.set("n", "<leader>fp", function()
 	print("file:", path)
 end, { desc = "Copy full file path" })
 
--- ============================================================================
--- MARKDOWN
--- ============================================================================
-
--- Checkbox toggle and text wrapping
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "markdown",
-	callback = function()
-		-- Text wrapping options
-		vim.opt_local.wrap = true
-		vim.opt_local.linebreak = true
-		vim.opt_local.list = false
-
-		vim.keymap.set("n", "<leader>cc", function()
-			local line = vim.api.nvim_get_current_line()
-			local new_line = line:gsub("^(%s*%- )%[(.-)%]", function(prefix, state)
-				return prefix .. (state == " " and "[x]" or "[ ]")
-			end)
-			vim.api.nvim_set_current_line(new_line)
-		end, { desc = "Toggle markdown checkbox", buffer = true })
-	end,
-})
