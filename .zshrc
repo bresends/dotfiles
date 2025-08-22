@@ -39,6 +39,15 @@ alias obs='z /mnt/c/Users/bruno/obsidian'
 alias lg='lazygit'
 
 # ============================================================================
+# Tmux
+# ============================================================================
+alias tmux-ressurect='pgrep -vx tmux > /dev/null && \
+		tmux new -d -s delete-me && \
+		tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && \
+		tmux kill-session -t delete-me && \
+		tmux attach || tmux attach'
+
+# ============================================================================
 # External Tool Integrations
 # ============================================================================
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
