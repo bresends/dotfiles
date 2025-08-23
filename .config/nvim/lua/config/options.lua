@@ -21,6 +21,9 @@ vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
 
+-- Spell checking
+vim.opt.spelllang = "en"
+
 -- Search settings
 vim.opt.ignorecase = true -- Case insensitive search
 vim.opt.smartcase = true -- Case sensitive if uppercase in search
