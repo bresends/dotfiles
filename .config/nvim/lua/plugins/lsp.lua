@@ -36,9 +36,7 @@ return {
 
 					-- Rename the variable under your cursor.
 					--  Most Language Servers support renaming across files, etc.
-					map("gl", function()
-						vim.diagnostic.open_float()
-					end, "Open Dignostics")
+					map("<leader>dg", vim.diagnostic.open_float, "Open [D]ia[G]gnostics")
 
 					map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 
