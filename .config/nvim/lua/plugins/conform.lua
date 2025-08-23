@@ -37,6 +37,8 @@ return {
 			typescript = { "biome", "biome-organize-imports" },
 			typescriptreact = { "biome", "biome-organize-imports" },
 			markdown = { "prettierd" },
+			html = { "prettierd" },
+			css = { "prettierd" },
 		},
 	},
 }
