@@ -54,8 +54,8 @@ vim.opt.swapfile = false -- Don't create swap files
 vim.opt.undofile = false -- Persistent undo
 vim.opt.updatetime = 250 -- Faster completion
 vim.opt.autoread = true -- Auto reload files changed outside vim
-vim.opt.autowrite = false -- Don't auto save
-vim.opt.timeoutlen = 300 -- Decrease mapped sequence wai time (Esc)
+vim.opt.autowrite = false -- Don't auto save when switching buffers or running commands
+vim.opt.timeoutlen = 300 -- Decrease mapped sequence wait time (Esc)
 
 -- Folding settings
 vim.opt.foldmethod = "expr" -- Use expression for folding
