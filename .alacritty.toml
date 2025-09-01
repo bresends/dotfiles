@@ -1,8 +1,0 @@
-import = ["/home/bruno/.config/alacritty/themes/themes/catppuccin.toml"]
-
-[font]
-size = 12
-
-[font.normal]
-family = "Hack Nerd Font"
-style = "Regular"
