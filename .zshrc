@@ -22,11 +22,11 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 
 # ============================================================================
-# Key Bindings
+# Key Bindings (zle -al to show all)
 # ============================================================================
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-bindkey '^[[Z' autosuggest-accept  # shift + tab
+bindkey "^[l" clear-screen     # Alt+l
 
 # ============================================================================
 # Aliases
