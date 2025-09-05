@@ -1,2 +1,3 @@
 theme = "Monokai Pro"
 confirm-close-surface = false
+app-notifications = no-clipboard-copy
