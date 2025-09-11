@@ -1,7 +1,6 @@
 include "%L"
 
 <dead_acute> <s> : "'s"
-<dead_acute> <S> : "'S"
 <dead_acute> <m> : "'m"
-<dead_acute> <M> : "'M"
+<dead_acute> <t> : "'t"
 <dead_acute> <c> : "ç"
