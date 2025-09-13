@@ -58,7 +58,7 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 # SSH hostname completion
-complete -o default -o nospace -W "$(grep "^Host" $HOME/.ssh/config | cut -d" " -f2)" scp sftp ssh
+complete -o default -o nospace -W "$(grep "^Host" $HOME/.ssh/config | cut -d" " -f2)" scp sftp ssh rsync
 
 # ============================================================================
 # Development Tools
