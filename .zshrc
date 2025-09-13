@@ -27,6 +27,8 @@ zstyle ':completion:*' menu no
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey "^[l" clear-screen     # Alt+l
+bindkey "^[u" backward-kill-line     # Alt+u
+bindkey "^[k" kill-line     # Alt+k
 
 # ============================================================================
 # Aliases
