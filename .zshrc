@@ -72,6 +72,3 @@ export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 # Fly.io
 export FLYCTL_INSTALL="$HOME/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
-
-# Vaultwarden
-export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
