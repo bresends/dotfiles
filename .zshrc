@@ -36,8 +36,6 @@ bindkey "^[k" kill-line     # Alt+k
 alias ls="ls --color=auto -lh"
 alias lsa='ls --color=auto -lah'
 alias vim='nvim'
-alias cd="echo 'Use Z to go to'"
-alias obs='z /mnt/c/Users/bruno/obsidian'
 alias lg='lazygit'
 alias a='php artisan'
 
