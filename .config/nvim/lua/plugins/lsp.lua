@@ -191,6 +191,9 @@ return {
 				cssls = {},
 				emmet_ls = {},
 				pyrefly = {},
+				dockerls = {},
+				jsonls = {},
+				yamlls = {},
 				-- clangd = {},
 				-- gopls = {},
 				-- rust_analyzer = {},
@@ -232,6 +235,8 @@ return {
 				"markdownlint-cli2", -- Markdown linting
 				"prettierd", -- Markdown formatting
 				"ruff", -- Python linting and formatting
+				"hadolint", -- Docker linting
+				"fixjson", -- JSON Formatting
 			})
 
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

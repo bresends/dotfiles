@@ -39,6 +39,9 @@ return {
 			markdown = { "prettierd" },
 			html = { "prettierd" },
 			css = { "prettierd" },
+			json = { "fixjson" },
+			yaml = { "prettierd" },
+			docker = { "prettierd" },
 		},
 	},
 }
