@@ -2,3 +2,4 @@
 .config/herd-lite/*
 .config/composer/*
 .config/lazygit/*
+.config/nvim/lazy-lock.json
