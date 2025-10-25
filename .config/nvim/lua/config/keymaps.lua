@@ -22,7 +22,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yankin
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
 vim.keymap.set("v", "p", '"_dP', { desc = "Paste and keep yanked text" })
-vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Write file" })
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Write buffer" })
 vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 vim.keymap.set("i", "<M-h>", "<Left>", { desc = "Move left" })
@@ -39,6 +39,7 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 -- ============================================================================
 
 -- Window splitting
+vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
 vim.keymap.set("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
 
