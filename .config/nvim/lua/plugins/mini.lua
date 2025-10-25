@@ -9,7 +9,7 @@ return { -- Collection of various small independent plugins/modules
 			desc = "Open mini.files (directory of current file)",
 		},
 		{
-			"_",
+			"<leader>-",
 			function()
 				require("mini.files").open(vim.uv.cwd(), true)
 			end,
@@ -39,6 +39,9 @@ return { -- Collection of various small independent plugins/modules
 				preview = true,
 				width_focus = 30,
 				width_preview = 60,
+			},
+			mappings = {
+				synchronize = "<leader>w",
 			},
 		})
 	end,
