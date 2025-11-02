@@ -51,7 +51,7 @@ alias tmux-ressurect='pgrep -vx tmux > /dev/null && \
 # ============================================================================
 # External Tool Integrations
 # ============================================================================
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
