@@ -1,20 +1,4 @@
 # ============================================================================
-# Oh My Zsh Configuration
-# ============================================================================
-export ZSH="$HOME/.oh-my-zsh"
-
-CASE_SENSITIVE="true"
-
-plugins=(
-  git
-  zsh-autosuggestions
-  F-Sy-H
-  fzf-tab
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# ============================================================================
 # Completion & Styling
 # ============================================================================
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -57,18 +41,3 @@ eval "$(starship init zsh)"
 
 # SSH hostname completion
 complete -o default -o nospace -W "$(grep "^Host" $HOME/.ssh/config | cut -d" " -f2)" scp sftp ssh rsync
-
-# ============================================================================
-# Development Tools
-# ============================================================================
-
-# Mise
-eval "$($HOME/.local/bin/mise activate zsh)"
-
-# Laravel
-export PATH="$HOME/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
-
-# Fly.io
-export FLYCTL_INSTALL="$HOME/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
