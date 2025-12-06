@@ -1,6 +1,0 @@
-include "%L"
-
-<dead_acute> <s> : "'s"
-<dead_acute> <m> : "'m"
-<dead_acute> <t> : "'t"
-<dead_acute> <c> : "ç"
