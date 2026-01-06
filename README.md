@@ -30,6 +30,6 @@ $ cd dotfiles
 Then use GNU stow to create symlinks
 
 ```
-$ stow ~ . --adopt
+$ stow -t ~ . --adopt
 $ git reset HEAD --hard
 ```
