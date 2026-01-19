@@ -228,14 +228,12 @@ return {
 			--
 			-- You can add other tools here that you want Mason to install
 			-- for you, so that they are available from within Neovim.
+			-- NOTE: Formatters (stylua, prettierd, ruff, fixjson, biome) are installed via Nix
+			-- and should not be managed by Mason on NixOS
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
-				"stylua", -- Used to format Lua code
 				"markdownlint-cli2", -- Markdown linting
-				"prettierd", -- Markdown formatting
-				"ruff", -- Python linting and formatting
 				"hadolint", -- Docker linting
-				"fixjson", -- JSON Formatting
 			})
 
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

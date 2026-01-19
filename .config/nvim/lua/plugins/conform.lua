@@ -1,3 +1,5 @@
+-- NOTE: Formatters are installed via Nix (see nix-config/modules/common/development.nix)
+-- and not through Mason, to ensure compatibility with NixOS
 return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
