@@ -143,24 +143,11 @@ return {
 				},
 			})
 
-			-- Customize LSP configs (optional)
-			-- nvim-lspconfig provides the base configs, we just customize what we need
-			vim.lsp.config("lua_ls", {
-				settings = {
-					Lua = {
-						completion = {
-							callSnippet = "Replace",
-						},
-						diagnostics = {
-							disable = { "missing-fields" },
-						},
-					},
-				},
-			})
-
 			-- Enable LSP servers using Neovim 0.11's native API
 			-- nvim-lspconfig provides the configs, vim.lsp.enable activates them
+			-- to customize check Josean Martinez.
 			vim.lsp.enable({
+				"lua_ls",
 				"biome",
 				"cssls",
 				"dockerls",
