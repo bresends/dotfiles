@@ -163,6 +163,7 @@ return {
 			vim.lsp.enable({
 				"biome",
 				"cssls",
+				"dockerls",
 				"emmet_ls",
 				"html",
 				"lua_ls",
