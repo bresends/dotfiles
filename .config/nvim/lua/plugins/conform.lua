@@ -44,6 +44,7 @@ return {
 			json = { "fixjson" },
 			yaml = { "prettierd" },
 			docker = { "prettierd" },
+			nix = { "nixfmt" },
 		},
 	},
 }
