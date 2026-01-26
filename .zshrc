@@ -33,6 +33,25 @@ alias tmux-ressurect='pgrep -vx tmux > /dev/null && \
 		tmux attach || tmux attach'
 
 # ============================================================================
+# Pomodoro Timer
+# ============================================================================
+declare -A pomo_options
+pomo_options["work"]="25"
+pomo_options["break"]="10"
+
+pomodoro () {
+	if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
+		val=$1
+		echo $val | lolcat
+		timer ${pomo_options["$val"]}m
+		mpv --no-video --volume=100 /run/current-system/sw/share/sounds/ocean/stereo/alarm-clock-elapsed.oga 2>/dev/null || printf '\a'
+	fi
+}
+
+alias work="pomodoro 'work'"
+alias break="pomodoro 'break'"
+
+# ============================================================================
 # External Tool Integrations
 # ============================================================================
 source <(fzf --zsh)
