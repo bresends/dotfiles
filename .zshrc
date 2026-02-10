@@ -15,15 +15,6 @@ bindkey "^[u" backward-kill-line     # Alt+u
 bindkey "^[k" kill-line     # Alt+k
 
 # ============================================================================
-# Aliases
-# ============================================================================
-alias ls="ls --color=auto -lh"
-alias lsa='ls --color=auto -lah'
-alias vim='nvim'
-alias lg='lazygit'
-alias a='php artisan'
-
-# ============================================================================
 # Tmux
 # ============================================================================
 alias tmux-ressurect='pgrep -vx tmux > /dev/null && \
