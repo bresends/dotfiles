@@ -55,7 +55,7 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Increase w
 -- ============================================================================
 
 vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "CLose current tab" })
+vim.keymap.set("n", "<leader>tq", "<cmd>tabclose<CR>", { desc = "Quit current tab" })
 vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open curren buffer in new tab" })
