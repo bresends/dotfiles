@@ -4,6 +4,17 @@ vim.opt_local.linebreak = true
 vim.opt_local.list = false -- Hide invisible characters (spaces, tabs) for cleaner writing
 vim.opt_local.spell = true
 
+-- Spell language
+vim.keymap.set("n", "<leader>zen", function()
+	vim.opt_local.spelllang = "en"
+	vim.notify("Spell language: English")
+end, { desc = "[Z] Spell language [En]glish", buffer = true })
+
+vim.keymap.set("n", "<leader>zpt", function()
+	vim.opt_local.spelllang = "pt_br"
+	vim.notify("Spell language: Português (BR)")
+end, { desc = "[Z] Spell language [PT]-BR", buffer = true })
+
 -- Checkbox toggle
 vim.keymap.set("n", "<leader>cc", function()
 	local line = vim.api.nvim_get_current_line()
