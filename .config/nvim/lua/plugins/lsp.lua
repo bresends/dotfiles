@@ -154,6 +154,7 @@ return {
 				"emmet_ls",
 				"html",
 				"lua_ls",
+				"markdown_oxide",
 				"marksman",
 				"tailwindcss",
 			})
