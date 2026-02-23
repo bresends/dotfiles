@@ -11,6 +11,7 @@ return {
 						["@markup.heading.3.markdown"] = { fg = "#fc9867", italic = false }, --H3
 						["@markup.strong.markdown_inline"] = { fg = colors.base.yellow, italic = false }, --Bold
 						["@markup.list.checked.markdown"] = { fg = colors.base.red, italic = false }, --Checked
+					LspCodeLens = { fg = "#8a8a8a", italic = true },
 					}
 				end,
 			})

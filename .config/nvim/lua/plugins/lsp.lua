@@ -111,6 +111,44 @@ return {
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
 						end, "[T]oggle Inlay [H]ints")
 					end
+
+					-- markdown-oxide specific features
+					if client and client.name == "markdown_oxide" then
+						vim.api.nvim_create_user_command("Today", function(args)
+							local date = args.args ~= "" and args.args or "today"
+							client:request("workspace/executeCommand", {
+								command = "jump",
+								arguments = { date },
+							})
+						end, {
+							desc = 'Open daily note (e.g., ":Daily two days ago", ":Daily next monday")',
+							nargs = "*",
+						})
+
+						-- Enable code lens for reference counts (if supported)
+						local function codelens_supported(bufnr)
+							for _, c in ipairs(vim.lsp.get_clients({ bufnr = bufnr })) do
+								if c.server_capabilities and c.server_capabilities.codeLensProvider then
+									return true
+								end
+							end
+							return false
+						end
+
+						vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave", "CursorHold", "BufEnter" }, {
+							buffer = event.buf,
+							callback = function()
+								if codelens_supported(event.buf) then
+									vim.lsp.codelens.refresh({ bufnr = event.buf })
+								end
+							end,
+						})
+
+						-- Trigger codelens refresh (to not only work on the events above)
+						if codelens_supported(event.buf) then
+							vim.lsp.codelens.refresh({ bufnr = event.buf })
+						end
+					end
 				end,
 			})
 
