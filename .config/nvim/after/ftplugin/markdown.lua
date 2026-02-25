@@ -86,16 +86,10 @@ vim.keymap.set("n", "<leader>rw", function()
 	)
 end, { desc = "[F]ind notes due for [R]eview", buffer = true })
 
--- Spell language
-vim.keymap.set("n", "<leader>zen", function()
-	vim.opt_local.spelllang = "en"
-	vim.notify("Spell language: English")
-end, { desc = "[Z] Spell language [En]glish", buffer = true })
-
-vim.keymap.set("n", "<leader>zpt", function()
-	vim.opt_local.spelllang = "pt_br"
+vim.keymap.set("n", "<leader>zl", function()
+	vim.opt_local.spelllang = { "pt_br", "en" }
 	vim.notify("Spell language: Português (BR)")
-end, { desc = "[Z] Spell language [PT]-BR", buffer = true })
+end, { desc = "[Z] Spell language [EN] and [PT]-BR", buffer = true })
 
 -- Checkbox toggle
 vim.keymap.set("n", "<leader>cc", function()
