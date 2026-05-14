@@ -24,12 +24,12 @@ local function parse_review_entry(file, today)
 			break
 		end
 
-		local review_date = line:match("^next_review:%s*(.+)")
+		local review_date = line:match("^nextReview:%s*(.+)")
 		if review_date then
 			next_review = review_date:sub(1, 10)
 		end
 
-		local count = line:match("^review_count:%s*(%d+)")
+		local count = line:match("^reviewCount:%s*(%d+)")
 		if count then
 			review_count = count
 		end
