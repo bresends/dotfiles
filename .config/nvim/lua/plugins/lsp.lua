@@ -187,6 +187,7 @@ return {
 			vim.lsp.enable({
 				"lua_ls",
 				"biome",
+				"clangd",
 				"cssls",
 				"dockerls",
 				"emmet_ls",
