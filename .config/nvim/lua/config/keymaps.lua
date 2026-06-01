@@ -3,13 +3,7 @@
 -- ============================================================================
 
 -- FILE EXECUTION & RELOAD
-vim.keymap.set(
-	"n",
-	"<leader>rr",
-	'<cmd>source % | echo "Sourced current file!"<CR>',
-	{ desc = "Source the current file" }
-)
-vim.keymap.set("v", "<leader>rx", ":lua<CR>", { desc = "Execute selected Lua code" })
+vim.keymap.set("n", "<leader>rr", "<cmd>restart<CR>", { desc = "Restart Neovim" })
 
 -- SEARCH & NAVIGATION
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
@@ -20,6 +14,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
 -- EDITING & TEXT MANIPULATION
 vim.keymap.set({ "n", "v" }, "c", '"_c')
 vim.keymap.set({ "n", "v" }, "C", '"_C')
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
 vim.keymap.set("v", "p", '"_dP', { desc = "Paste and keep yanked text" })
@@ -31,7 +26,23 @@ vim.keymap.set("i", "<M-l>", "<Right>", { desc = "Move right" })
 
 -- LINE & SELECTION MOVEMENT
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
+vim.keymap.set("n", "<a-k>", ":m .-2<cr>==", { desc = "move line up" })
+vim.keymap.set("n", "<Enter>", "v<Enter>", { remap = true, desc = "Init selection" })
+
+vim.keymap.set({ "x", "o" }, "<Enter>", function()
+	if vim.treesitter.get_parser(nil, nil, { error = false }) then
+		require("vim.treesitter._select").select_parent(vim.v.count1)
+	else
+		vim.lsp.buf.selection_range(vim.v.count1)
+	end
+end, { desc = "Increment selection" })
+
+vim.keymap.set({ "x", "o" }, "<Backspace>", function()
+	if vim.treesitter.get_parser(nil, nil, { error = false }) then
+		require("vim.treesitter._select").select_child(vim.v.count1)
+	end
+end, { desc = "Decrement selection" })
+
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
