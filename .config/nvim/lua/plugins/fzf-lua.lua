@@ -2,6 +2,11 @@ return {
 	"ibhagwan/fzf-lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
+		fzf_colors = {
+			true,
+			bg = "-1",
+			gutter = "-1",
+		},
 		keymap = {
 			fzf = {
 				["ctrl-q"] = "select-all+accept", -- add search result to the quickfix list
