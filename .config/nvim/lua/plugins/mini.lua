@@ -1,5 +1,6 @@
 return { -- Collection of various small independent plugins/modules
 	"echasnovski/mini.nvim",
+	event = "BufReadPre",
 	keys = {
 		{
 			"-",
@@ -33,6 +34,13 @@ return { -- Collection of various small independent plugins/modules
 		require("mini.surround").setup()
 
 		require("mini.pairs").setup()
+
+		-- Highlight color codes (hex, hsl, rgb, etc.) with their actual color
+		require("mini.hipatterns").setup({
+			highlighters = {
+				hex_color = require("mini.hipatterns").gen_highlighter.hex_color(),
+			},
+		})
 
 		require("mini.files").setup({
 			windows = {

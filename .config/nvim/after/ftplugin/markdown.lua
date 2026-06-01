@@ -4,6 +4,9 @@ vim.opt_local.linebreak = true
 vim.opt_local.list = false -- Hide invisible characters (spaces, tabs) for cleaner writing
 vim.opt_local.spell = true
 
+vim.keymap.set({ "n", "o", "x" }, "j", "gj", { buffer = true, desc = "Move down by visual line" })
+vim.keymap.set({ "n", "o", "x" }, "k", "gk", { buffer = true, desc = "Move up by visual line" })
+
 local function date_after(days)
 	return os.date("%Y-%m-%d", os.time() + (days * 24 * 60 * 60))
 end
