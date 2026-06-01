@@ -12,8 +12,18 @@ return {
 						CursorLineNr = { fg = colors.base.yellow },
 
 						-- Clear background for floats and plugins
+						Normal = { bg = "NONE" },
+						NormalNC = { bg = "NONE" },
+						EndOfBuffer = { bg = "NONE" },
 						NormalFloat = { bg = "NONE" },
 						FloatBorder = { bg = "NONE" },
+						SignColumn = { bg = "NONE" },
+						StatusLine = { bg = "NONE" },
+						StatusLineNC = { bg = "NONE" },
+						TabLine = { bg = "NONE" },
+						TabLineFill = { bg = "NONE" },
+						TabLineSel = { bg = "NONE" },
+						ColorColumn = { bg = "NONE" },
 						LazyNormal = { bg = "NONE" },
 						LazyBorder = { bg = "NONE", fg = "#727072" },
 						LazyBackdrop = { bg = "NONE" },
