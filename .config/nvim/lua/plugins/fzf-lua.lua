@@ -3,9 +3,10 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
 		fzf_colors = {
-			true,
 			bg = "-1",
 			gutter = "-1",
+			["bg+"] = { "bg", { "Visual" } },
+			["prompt"] = "#ff6188",
 		},
 		keymap = {
 			fzf = {
@@ -41,6 +42,34 @@ return {
 				require("fzf-lua").live_grep()
 			end,
 			desc = "[F]ind by [G]rep",
+		},
+		{
+			"<leader>gs",
+			function()
+				require("fzf-lua").git_status()
+			end,
+			desc = "[G]it [S]tatus (changed files)",
+		},
+		{
+			"<leader>gc",
+			function()
+				require("fzf-lua").git_bcommits()
+			end,
+			desc = "[G]it [C]ommits (current file/buffer history)",
+		},
+		{
+			"<leader>gd",
+			function()
+				require("fzf-lua").git_diff()
+			end,
+			desc = "[G]it [D]iff (branch/commit diffs)",
+		},
+		{
+			"<leader>gh",
+			function()
+				require("fzf-lua").git_hunks()
+			end,
+			desc = "[G]it [H]unks (lines of code changes)",
 		},
 		{
 			"<leader>fc",

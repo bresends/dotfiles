@@ -11,6 +11,13 @@ return {
 						Visual = { bg = "#4a4a51" },
 						CursorLineNr = { fg = colors.base.yellow },
 
+						-- Clear background for floats and plugins
+						NormalFloat = { bg = "NONE" },
+						FloatBorder = { bg = "NONE" },
+						LazyNormal = { bg = "NONE" },
+						LazyBorder = { bg = "NONE", fg = "#727072" },
+						LazyBackdrop = { bg = "NONE" },
+
 						["@markup.heading.1.markdown"] = { fg = "#fc9867", italic = false }, --H2
 						["@markup.heading.2.markdown"] = { fg = colors.base.red, italic = false }, --H1
 						["@markup.heading.3.markdown"] = { fg = colors.base.blue, italic = false }, --H3
