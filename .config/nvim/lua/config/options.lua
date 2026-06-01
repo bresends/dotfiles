@@ -33,11 +33,10 @@ vim.opt.inccommand = "split" -- Show substitutions live
 
 -- Visual settings
 vim.opt.termguicolors = true -- Enable 24-bit colors
-vim.o.showmode = false -- Mode will be shown in the status line
 vim.opt.signcolumn = "yes" -- Always show sign column
 vim.opt.matchtime = 2 -- How long to show matching bracket
 vim.opt.cmdheight = 1 -- Command line height
-vim.opt.completeopt = "menuone,noinsert,noselect" -- Completion options
+vim.opt.completeopt = "menuone,noinsert,noselect,fuzzy" -- Completion options
 vim.opt.showmode = false -- Don't show mode in command line
 vim.opt.pumheight = 10 -- Popup menu height
 vim.opt.pumblend = 10 -- Popup menu transparency
@@ -51,7 +50,10 @@ vim.opt.synmaxcol = 300 -- Syntax highlighting limit
 vim.opt.backup = false -- Don't create backup files
 vim.opt.writebackup = false -- Don't create backup before writing
 vim.opt.swapfile = false -- Don't create swap files
-vim.opt.undofile = false -- Persistent undo
+local undodir = vim.fn.stdpath("state") .. "/undo"
+vim.fn.mkdir(undodir, "p")
+vim.opt.undodir = undodir
+vim.opt.undofile = true -- Persistent undo
 vim.opt.updatetime = 250 -- Faster completion
 vim.opt.autoread = true -- Auto reload files changed outside vim
 vim.opt.autowrite = false -- Don't auto save when switching buffers or running commands
