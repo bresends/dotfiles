@@ -58,6 +58,13 @@ return {
 			desc = "[G]it [C]ommits (current file/buffer history)",
 		},
 		{
+			"<leader>gC",
+			function()
+				require("fzf-lua").git_commits()
+			end,
+			desc = "[G]it [C]ommits (project-wide history)",
+		},
+		{
 			"<leader>gd",
 			function()
 				require("fzf-lua").git_diff()
