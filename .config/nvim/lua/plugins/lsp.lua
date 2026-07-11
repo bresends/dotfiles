@@ -194,8 +194,9 @@ return {
 				"html",
 				"lua_ls",
 				"markdown_oxide",
-				"marksman",
-				"tailwindcss",
+			"marksman",
+			"nixd",
+			"tailwindcss",
 			})
 		end,
 	},
