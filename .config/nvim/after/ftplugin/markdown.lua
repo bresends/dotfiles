@@ -106,11 +106,6 @@ vim.keymap.set("n", "<leader>ru", function()
 	end)
 end, { desc = "[R]eview [U]pdate next review date", buffer = true })
 
-vim.keymap.set("n", "<leader>zl", function()
-	vim.opt_local.spelllang = { "pt_br", "en" }
-	vim.notify("Spell language: Português (BR)")
-end, { desc = "[Z] Spell language [EN] and [PT]-BR", buffer = true })
-
 -- Checkbox toggle
 vim.keymap.set("n", "<leader>cc", function()
 	local line = vim.api.nvim_get_current_line()

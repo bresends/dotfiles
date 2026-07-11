@@ -22,7 +22,7 @@ vim.schedule(function()
 end)
 
 -- Spell checking
-vim.opt.spelllang = "en"
+vim.opt.spelllang = { "en", "pt_br" }
 
 -- Search settings
 vim.opt.ignorecase = true -- Case insensitive search
