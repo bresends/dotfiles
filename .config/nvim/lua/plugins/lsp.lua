@@ -139,14 +139,14 @@ return {
 							buffer = event.buf,
 							callback = function()
 								if codelens_supported(event.buf) then
-									vim.lsp.codelens.refresh({ bufnr = event.buf })
+									vim.lsp.codelens.enable(true, { bufnr = event.buf })
 								end
 							end,
 						})
 
 						-- Trigger codelens refresh (to not only work on the events above)
 						if codelens_supported(event.buf) then
-							vim.lsp.codelens.refresh({ bufnr = event.buf })
+							vim.lsp.codelens.enable(true, { bufnr = event.buf })
 						end
 					end
 				end,
